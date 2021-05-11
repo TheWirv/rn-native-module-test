@@ -1,12 +1,13 @@
-import { requireNativeComponent, ViewStyle } from 'react-native';
+import {requireNativeComponent} from 'react-native';
+// Types
+import type {ViewStyle} from 'react-native';
+import type {PropsWithChildren} from 'react';
 
-type RnNativeModuleTestProps = {
-  color: string;
-  style: ViewStyle;
-};
+type OnChangeFocusViewProps = PropsWithChildren<{
+  onBlur?: () => void;
+  onFocus?: () => void;
+  style?: ViewStyle;
+}>;
 
-export const RnNativeModuleTestViewManager = requireNativeComponent<RnNativeModuleTestProps>(
-'RnNativeModuleTestView'
-);
-
-export default RnNativeModuleTestViewManager;
+export const OnChangeFocusView =
+  requireNativeComponent<OnChangeFocusViewProps>('OnChangeFocusView');

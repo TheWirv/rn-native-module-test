@@ -17,6 +17,6 @@ public class RnNativeModuleTestPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(new RnNativeModuleTestViewManager());
+        return Arrays.<ViewManager>asList(new OnChangeFocusViewManager());
     }
 }
